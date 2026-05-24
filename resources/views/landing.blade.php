@@ -379,62 +379,161 @@
 
  <!-- ==================== GALLERY SECTION ==================== -->
 <section class="py-16 sm:py-20 bg-[#0d0418]" id="gallery">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12 sm:mb-16">
-            <p class="text-rose-300 text-sm uppercase tracking-[0.2em] mb-3 font-medium">Moments</p>
-            <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white">Gallery</h2>
-        </div>
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
-            <!-- Item 1 -->
-            <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] flex items-end p-4 relative"
-                 style="background-image: url('{{ asset('images/img1.jpg') }}'); background-size: cover; background-position: center;">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <span class="relative z-10 text-white text-xs sm:text-sm font-medium">Sunset Deck</span>
-            </div>
-            <!-- Item 2 -->
-            <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] flex items-end p-4 relative"
-                 style="background-image: url('{{ asset('images/img2.jpg') }}'); background-size: cover; background-position: center;">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <span class="relative z-10 text-white text-xs sm:text-sm font-medium">Tea Service</span>
-            </div>
-            <!-- Item 3 -->
-            <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] flex items-end p-4 relative"
-                 style="background-image: url('{{ asset('images/img3.jpg') }}'); background-size: cover; background-position: center;">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <span class="relative z-10 text-white text-xs sm:text-sm font-medium">Golden Hour</span>
-            </div>
-            <!-- Item 4 - visible sm and up -->
-            <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] flex items-end p-4 relative sm:block hidden"
-                 style="background-image: url('{{ asset('images/img4.jpg') }}'); background-size: cover; background-position: center;">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <span class="relative z-10 text-white text-xs sm:text-sm font-medium">Canapés</span>
-            </div>
-            <!-- Item 5 - visible lg and up -->
-            <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] flex items-end p-4 relative lg:block hidden"
-                 style="background-image: url('{{ asset('images/img5.jpg') }}'); background-size: cover; background-position: center;">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <span class="relative z-10 text-white text-xs sm:text-sm font-medium">Live Music</span>
-            </div>
-            <!-- Item 6 - visible lg and up -->
-            <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] flex items-end p-4 relative lg:block hidden"
-                 style="background-image: url('{{ asset('images/img1.jpg') }}'); background-size: cover; background-position: center;">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <span class="relative z-10 text-white text-xs sm:text-sm font-medium">Keepsakes</span>
-            </div>
-            <!-- Item 7 - visible sm and up -->
-            <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] flex items-end p-4 relative sm:block hidden"
-                 style="background-image: url('{{ asset('images/img7.jpg') }}'); background-size: cover; background-position: center;">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <span class="relative z-10 text-white text-xs sm:text-sm font-medium">Evening Glow</span>
-            </div>
-            <!-- Item 8 -->
-            <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] flex items-end p-4 relative"
-                 style="background-image: url('{{ asset('images/img8.jpg') }}'); background-size: cover; background-position: center;">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <span class="relative z-10 text-white text-xs sm:text-sm font-medium">Cruise Views</span>
-            </div>
-        </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 sm:mb-16">
+      <p class="text-rose-300 text-sm uppercase tracking-[0.2em] mb-3 font-medium">Moments</p>
+      <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white">Gallery</h2>
     </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+
+      <!-- Item 1 -->
+      <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] relative">
+        <img
+          src="https://images.unsplash.com/photo-1710762633492-617ca7c87f2b?q=80&w=400&fm=webp"
+          srcset="
+            https://images.unsplash.com/photo-1710762633492-617ca7c87f2b?q=80&w=400&fm=webp 400w,
+            https://images.unsplash.com/photo-1710762633492-617ca7c87f2b?q=80&w=600&fm=webp 600w,
+            https://images.unsplash.com/photo-1710762633492-617ca7c87f2b?q=80&w=800&fm=webp 800w
+          "
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          alt="Sunset Deck"
+          class="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          fetchpriority="high"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <span class="relative z-10 text-white text-xs sm:text-sm font-medium p-4">Sunset Deck</span>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] relative">
+        <img
+          src="https://images.unsplash.com/photo-1620490448396-d03342d5f352?q=80&w=400&fm=webp"
+          srcset="
+            https://images.unsplash.com/photo-1620490448396-d03342d5f352?q=80&w=400&fm=webp 400w,
+            https://images.unsplash.com/photo-1620490448396-d03342d5f352?q=80&w=600&fm=webp 600w,
+            https://images.unsplash.com/photo-1620490448396-d03342d5f352?q=80&w=800&fm=webp 800w
+          "
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          alt="Tea Service"
+          class="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          fetchpriority="high"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <span class="relative z-10 text-white text-xs sm:text-sm font-medium p-4">Tea Service</span>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] relative">
+        <img
+          src="https://images.unsplash.com/photo-1529117218-5329a8d5e0f5?q=80&w=400&fm=webp"
+          srcset="
+            https://images.unsplash.com/photo-1529117218-5329a8d5e0f5?q=80&w=400&fm=webp 400w,
+            https://images.unsplash.com/photo-1529117218-5329a8d5e0f5?q=80&w=600&fm=webp 600w,
+            https://images.unsplash.com/photo-1529117218-5329a8d5e0f5?q=80&w=800&fm=webp 800w
+          "
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          alt="Golden Hour"
+          class="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <span class="relative z-10 text-white text-xs sm:text-sm font-medium p-4">Golden Hour</span>
+      </div>
+
+      <!-- Item 4 - visible sm and up -->
+      <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] relative sm:block hidden">
+        <img
+          src="https://images.unsplash.com/photo-1659415930606-e06af6309f23?q=80&w=400&fm=webp"
+          srcset="
+            https://images.unsplash.com/photo-1659415930606-e06af6309f23?q=80&w=400&fm=webp 400w,
+            https://images.unsplash.com/photo-1659415930606-e06af6309f23?q=80&w=600&fm=webp 600w,
+            https://images.unsplash.com/photo-1659415930606-e06af6309f23?q=80&w=800&fm=webp 800w
+          "
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          alt="Canapés"
+          class="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <span class="relative z-10 text-white text-xs sm:text-sm font-medium p-4">Canapés</span>
+      </div>
+
+      <!-- Item 5 - visible lg and up -->
+      <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] relative lg:block hidden">
+        <img
+          src="https://images.unsplash.com/photo-1565035010268-a3816f98589a?q=80&w=400&fm=webp"
+          srcset="
+            https://images.unsplash.com/photo-1565035010268-a3816f98589a?q=80&w=400&fm=webp 400w,
+            https://images.unsplash.com/photo-1565035010268-a3816f98589a?q=80&w=600&fm=webp 600w,
+            https://images.unsplash.com/photo-1565035010268-a3816f98589a?q=80&w=800&fm=webp 800w
+          "
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          alt="Live Music"
+          class="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <span class="relative z-10 text-white text-xs sm:text-sm font-medium p-4">Live Music</span>
+      </div>
+
+      <!-- Item 6 - visible lg and up -->
+      <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] relative lg:block hidden">
+        <img
+          src="https://images.unsplash.com/photo-1652626076133-22a4ac122141?q=80&w=400&fm=webp"
+          srcset="
+            https://images.unsplash.com/photo-1652626076133-22a4ac122141?q=80&w=400&fm=webp 400w,
+            https://images.unsplash.com/photo-1652626076133-22a4ac122141?q=80&w=600&fm=webp 600w,
+            https://images.unsplash.com/photo-1652626076133-22a4ac122141?q=80&w=800&fm=webp 800w
+          "
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          alt="Keepsakes"
+          class="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <span class="relative z-10 text-white text-xs sm:text-sm font-medium p-4">Keepsakes</span>
+      </div>
+
+      <!-- Item 7 - visible sm and up -->
+      <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] relative sm:block hidden">
+        <img
+          src="https://images.unsplash.com/photo-1667697692321-19498f860107?q=80&w=400&fm=webp"
+          srcset="
+            https://images.unsplash.com/photo-1667697692321-19498f860107?q=80&w=400&fm=webp 400w,
+            https://images.unsplash.com/photo-1667697692321-19498f860107?q=80&w=600&fm=webp 600w,
+            https://images.unsplash.com/photo-1667697692321-19498f860107?q=80&w=800&fm=webp 800w
+          "
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          alt="Evening Glow"
+          class="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <span class="relative z-10 text-white text-xs sm:text-sm font-medium p-4">Evening Glow</span>
+      </div>
+
+      <!-- Item 8 -->
+      <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] relative">
+        <img
+          src="https://images.unsplash.com/photo-1563829904222-2c743e614282?q=80&w=400&fm=webp"
+          srcset="
+            https://images.unsplash.com/photo-1563829904222-2c743e614282?q=80&w=400&fm=webp 400w,
+            https://images.unsplash.com/photo-1563829904222-2c743e614282?q=80&w=600&fm=webp 600w,
+            https://images.unsplash.com/photo-1563829904222-2c743e614282?q=80&w=800&fm=webp 800w
+          "
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          alt="Cruise Views"
+          class="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <span class="relative z-10 text-white text-xs sm:text-sm font-medium p-4">Cruise Views</span>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 

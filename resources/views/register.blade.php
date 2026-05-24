@@ -77,6 +77,13 @@
     .step-indicator {
       transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
+
+    /* Payment tab active style */
+    .payment-tab-active {
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transform: translateY(-1px);
+    }
   </style>
 </head>
 
@@ -175,39 +182,72 @@
         x-transition:enter-start="opacity-0 translate-x-6" x-transition:enter-end="opacity-100 translate-x-0"
         style="display: none;">
         <h2 class="font-display text-2xl sm:text-3xl font-bold mb-1">Complete Payment</h2>
-        <p class="text-white/50 text-sm mb-6">Scan the QR code or use the Cash App tag below</p>
+        <p class="text-white/50 text-sm mb-6">Choose your payment method and scan the QR code</p>
 
+        <!-- Payment Tabs -->
         <div class="glass-card rounded-2xl p-5 sm:p-6 text-center">
-          <!-- Static QR image -->
-          <div class="bg-white rounded-xl p-3 inline-block mx-auto mb-4">
-            <img src="{{ asset('images/qr.jpg') }}" alt="Payment QR Code" class="w-[180px] h-[180px] object-contain">
-          </div>
-          <p class="text-gold-400 font-display text-2xl font-bold mb-2">$christabreland</p>
-          <p class="text-white/60 text-sm mb-4">
-            Total: <span class="text-white font-bold">$<span x-text="form.tickets * 200"></span></span>
-          </p>
-          <div class="flex flex-col sm:flex-row gap-3 justify-center mb-4">
-            <button @click="copyTag()"
-              class="tap-target px-5 py-3 glass-card rounded-full text-white text-sm font-medium hover:bg-white/12 transition-all flex items-center gap-2 justify-center">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <rect x="9" y="9" width="13" height="13" rx="2" stroke-width="2" />
-                <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke-width="2" />
-              </svg>
-              <span x-text="copyTagText">Copy Tag</span>
+          <!-- Tab buttons -->
+          <div class="flex gap-2 mb-6 bg-white/5 p-1 rounded-full">
+            <button 
+              @click="activePaymentTab = 'cashapp'"
+              :class="activePaymentTab === 'cashapp' ? 'payment-tab-active' : ''"
+              class="flex-1 py-2.5 px-4 rounded-full text-sm font-medium transition-all duration-300"
+            >
+              Cash App 
             </button>
-            <button @click="copyPaymentLink()"
-              class="tap-target px-5 py-3 glass-card rounded-full text-white text-sm font-medium hover:bg-white/12 transition-all flex items-center gap-2 justify-center">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101" />
-              </svg>
-              <span x-text="copyLinkText">Copy Link</span>
+            <button 
+              @click="activePaymentTab = 'zelle'"
+              :class="activePaymentTab === 'zelle' ? 'payment-tab-active' : ''"
+              class="flex-1 py-2.5 px-4 rounded-full text-sm font-medium transition-all duration-300"
+            >
+              🏦 Zelle
             </button>
           </div>
-          <p x-show="copySuccess" class="text-green-400 text-sm" x-text="copySuccess"></p>
+
+          <!-- Cash App Content -->
+          <div x-show="activePaymentTab === 'cashapp'" x-transition>
+            <div class="bg-white rounded-xl p-3 inline-block mx-auto mb-4">
+              <img src="{{ asset('images/qr.jpg') }}" alt="Cash App QR Code" class="w-[180px] h-[180px] object-contain">
+            </div>
+            <p class="text-gold-400 font-display text-2xl font-bold mb-2">$christabreland</p>
+            <p class="text-white/60 text-sm mb-4">
+              Total: <span class="text-white font-bold">$<span x-text="form.tickets * 200"></span></span>
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+              <button @click="copyCashTag()"
+                class="tap-target px-5 py-3 glass-card rounded-full text-white text-sm font-medium hover:bg-white/12 transition-all flex items-center gap-2 justify-center">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <rect x="9" y="9" width="13" height="13" rx="2" stroke-width="2" />
+                  <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke-width="2" />
+                </svg>
+                <span x-text="copyTagText">Copy Tag</span>
+              </button>
+              <button @click="copyCashLink()"
+                class="tap-target px-5 py-3 glass-card rounded-full text-white text-sm font-medium hover:bg-white/12 transition-all flex items-center gap-2 justify-center">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101" />
+                </svg>
+                <span x-text="copyLinkText">Copy Link</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Zelle Content -->
+          <div x-show="activePaymentTab === 'zelle'" x-transition>
+            <div class="bg-white rounded-xl p-3 inline-block mx-auto mb-4">
+              <img src="{{ asset('images/zelle-qr.jpg') }}" alt="Zelle QR Code" class="w-[180px] h-[180px] object-contain">
+            </div>
+            <p class="text-gold-400 font-display text-2xl font-bold mb-2">Christa Breland</p>
+            <p class="text-white/60 text-sm mb-4">
+              Total: <span class="text-white font-bold">$<span x-text="form.tickets * 200"></span></span>
+            </p>
+          </div>
+          
+          <p x-show="copySuccess" class="text-green-400 text-sm mt-3" x-text="copySuccess"></p>
         </div>
 
-        <!-- Finalize button (replaces old "I Have Completed Payment" and step 3) -->
+        <!-- Finalize button (outside tabs, same for both) -->
         <button @click="finalizeRegistration()"
           :disabled="submitting"
           class="tap-target w-full mt-5 py-4 bg-gradient-to-r from-fuchsia-600 to-rose-500 rounded-full text-white font-semibold text-lg premium-shadow hover:shadow-xl hover:shadow-rose-500/40 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed">
@@ -220,8 +260,6 @@
             Submitting...
           </span>
         </button>
-
-        
       </div>
     </div>
 
@@ -273,16 +311,20 @@
         registrationDbId: null,
         showConfirmation: false,
         confirmationData: { registration_id: '', ticket_number: '' },
+        // Payment tab
+        activePaymentTab: 'cashapp',
+        // Cash App copy state
         copyTagText: 'Copy Tag',
         copyLinkText: 'Copy Link',
+        // Zelle copy state
+        zelleCopyText: 'Copy Zelle Info',
+        zelleDetail: 'christabreland', 
         copySuccess: '',
         submitting: false,
         submittingStep1: false,
         toast: { show: false, message: '', type: 'success' },
 
-        // No timer, no QR generation, no file/reference handling needed
-
-        copyTag() {
+        copyCashTag() {
           navigator.clipboard.writeText('$TeaPartyCruise').then(() => {
             this.copyTagText = 'Copied!';
             this.copySuccess = 'Cash App tag copied!';
@@ -292,7 +334,7 @@
             setTimeout(() => { this.copyTagText = 'Copy Tag'; }, 2000);
           });
         },
-        copyPaymentLink() {
+        copyCashLink() {
           navigator.clipboard.writeText('https://cash.app/$christabreland?qr=1').then(() => {
             this.copyLinkText = 'Copied!';
             this.copySuccess = 'Payment link copied!';
@@ -302,6 +344,7 @@
             setTimeout(() => { this.copyLinkText = 'Copy Link'; }, 2000);
           });
         },
+       
 
         async submitStep1() {
           this.error = '';
@@ -339,7 +382,6 @@
           }
           const csrf = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
           
-          // No FormData needed – we're just confirming payment without extra info
           this.submitting = true;
           try {
             const res = await fetch(`/api/register/finalize/${this.registrationDbId}`, {
