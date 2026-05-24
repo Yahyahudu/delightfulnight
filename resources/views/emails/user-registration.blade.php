@@ -8,7 +8,6 @@
 
     <img src="{{ $message->embed($qrImagePath) }}" alt="CashApp QR Code" width="200">
 
-    <p>After payment, please upload your payment reference or screenshot via the link you received earlier (or use your registration ID: <strong>{{ $registration->registration_id }}</strong>).</p>
     <p><strong>Ticket Number:</strong> {{ $registration->ticket_number }}</p>
     <p>We'll notify you once your payment is verified and your spot is confirmed.</p>
     <p>Questions? Reply to this email.</p>
