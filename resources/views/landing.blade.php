@@ -417,7 +417,7 @@
             </div>
             <!-- Item 6 - visible lg and up -->
             <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] flex items-end p-4 relative lg:block hidden"
-                 style="background-image: url('{{ asset('images/img6.jpg') }}'); background-size: cover; background-position: center;">
+                 style="background-image: url('{{ asset('images/img1.jpg') }}'); background-size: cover; background-position: center;">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <span class="relative z-10 text-white text-xs sm:text-sm font-medium">Keepsakes</span>
             </div>
