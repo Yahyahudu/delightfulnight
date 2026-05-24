@@ -154,9 +154,6 @@
             <select x-model.number="form.tickets" required
               class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-fuchsia-400 focus:ring-2 focus:ring-fuchsia-500/20 transition-all appearance-none">
               <option value="1" class="bg-[#2d1b4e]">1 Ticket ($200)</option>
-              <option value="2" class="bg-[#2d1b4e]">2 Tickets ($400)</option>
-              <option value="3" class="bg-[#2d1b4e]">3 Tickets ($600)</option>
-              <option value="4" class="bg-[#2d1b4e]">4 Tickets ($800)</option>
             </select>
           </div>
           
