@@ -274,10 +274,6 @@
           <span class="font-mono text-gold-400 font-bold text-sm" x-text="confirmationData.registration_id">—</span>
         </div>
         <div class="flex justify-between">
-          <span class="text-white/50 text-sm">Ticket Number</span>
-          <span class="font-mono text-rose-400 font-bold text-sm" x-text="confirmationData.ticket_number">—</span>
-        </div>
-        <div class="flex justify-between">
           <span class="text-white/50 text-sm">Total Paid</span>
           <span class="font-bold text-sm" x-text="'$' + (form.tickets * 200)">—</span>
         </div>
@@ -307,7 +303,7 @@
         error: '',
         registrationDbId: null,
         showConfirmation: false,
-        confirmationData: { registration_id: '', ticket_number: '' },
+        confirmationData: { registration_id: '' },
         // Payment tab
         activePaymentTab: 'cashapp',
         // Cash App copy state
@@ -360,7 +356,6 @@
             if (data.success) {
               this.registrationDbId = data.id;
               this.confirmationData.registration_id = data.registration_id;
-              this.confirmationData.ticket_number = data.ticket_number;
               this.step = 2;
             } else {
               this.error = data.message || 'Registration failed. Please try again.';

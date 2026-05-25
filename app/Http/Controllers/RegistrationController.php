@@ -44,7 +44,6 @@ class RegistrationController extends Controller
         return response()->json([
             'success' => true,
             'registration_id' => $registration->registration_id,
-            'ticket_number' => $registration->ticket_number,
             'id' => $registration->id,
         ]);
     }
