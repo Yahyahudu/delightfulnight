@@ -377,7 +377,7 @@
         </div>
     </section>
 
- <!-- ==================== GALLERY SECTION ==================== -->
+<!-- ==================== GALLERY SECTION ==================== -->
 <section class="py-16 sm:py-20 bg-[#0d0418]" id="gallery">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12 sm:mb-16">
@@ -389,13 +389,7 @@
       <!-- Item 1 -->
       <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] relative">
         <img
-          src="https://images.unsplash.com/photo-1710762633492-617ca7c87f2b?q=80&w=400&fm=webp"
-          srcset="
-            https://images.unsplash.com/photo-1710762633492-617ca7c87f2b?q=80&w=400&fm=webp 400w,
-            https://images.unsplash.com/photo-1710762633492-617ca7c87f2b?q=80&w=600&fm=webp 600w,
-            https://images.unsplash.com/photo-1710762633492-617ca7c87f2b?q=80&w=800&fm=webp 800w
-          "
-          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          src=" https://images.unsplash.com/photo-1710762633492-617ca7c87f2b?q=80"
           alt="Sunset Deck"
           class="absolute inset-0 w-full h-full object-cover"
           loading="eager"
@@ -408,13 +402,7 @@
       <!-- Item 2 -->
       <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] relative">
         <img
-          src="https://images.unsplash.com/photo-1620490448396-d03342d5f352?q=80&w=400&fm=webp"
-          srcset="
-            https://images.unsplash.com/photo-1620490448396-d03342d5f352?q=80&w=400&fm=webp 400w,
-            https://images.unsplash.com/photo-1620490448396-d03342d5f352?q=80&w=600&fm=webp 600w,
-            https://images.unsplash.com/photo-1620490448396-d03342d5f352?q=80&w=800&fm=webp 800w
-          "
-          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          src="{{ asset('images/gallery/img2.jpeg') }}"
           alt="Tea Service"
           class="absolute inset-0 w-full h-full object-cover"
           loading="eager"
@@ -427,13 +415,7 @@
       <!-- Item 3 -->
       <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] relative">
         <img
-          src="https://images.unsplash.com/photo-1529117218-5329a8d5e0f5?q=80&w=400&fm=webp"
-          srcset="
-            https://images.unsplash.com/photo-1529117218-5329a8d5e0f5?q=80&w=400&fm=webp 400w,
-            https://images.unsplash.com/photo-1529117218-5329a8d5e0f5?q=80&w=600&fm=webp 600w,
-            https://images.unsplash.com/photo-1529117218-5329a8d5e0f5?q=80&w=800&fm=webp 800w
-          "
-          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          src="{{ asset('images/gallery/img4.jpeg') }}"
           alt="Golden Hour"
           class="absolute inset-0 w-full h-full object-cover"
           loading="eager"
@@ -445,13 +427,7 @@
       <!-- Item 4 - visible sm and up -->
       <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] relative sm:block hidden">
         <img
-          src="https://images.unsplash.com/photo-1659415930606-e06af6309f23?q=80&w=400&fm=webp"
-          srcset="
-            https://images.unsplash.com/photo-1659415930606-e06af6309f23?q=80&w=400&fm=webp 400w,
-            https://images.unsplash.com/photo-1659415930606-e06af6309f23?q=80&w=600&fm=webp 600w,
-            https://images.unsplash.com/photo-1659415930606-e06af6309f23?q=80&w=800&fm=webp 800w
-          "
-          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          src="{{ asset('images/gallery/img3.jpeg') }}"
           alt="Canapés"
           class="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
@@ -461,15 +437,9 @@
       </div>
 
       <!-- Item 5 - visible lg and up -->
-      <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] relative lg:block hidden">
+      <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] relative ">
         <img
-          src="https://images.unsplash.com/photo-1565035010268-a3816f98589a?q=80&w=400&fm=webp"
-          srcset="
-            https://images.unsplash.com/photo-1565035010268-a3816f98589a?q=80&w=400&fm=webp 400w,
-            https://images.unsplash.com/photo-1565035010268-a3816f98589a?q=80&w=600&fm=webp 600w,
-            https://images.unsplash.com/photo-1565035010268-a3816f98589a?q=80&w=800&fm=webp 800w
-          "
-          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          src="{{ asset('images/gallery/img5.jpeg') }}"
           alt="Live Music"
           class="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
@@ -479,15 +449,9 @@
       </div>
 
       <!-- Item 6 - visible lg and up -->
-      <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] relative lg:block hidden">
+      <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] relative ">
         <img
-          src="https://images.unsplash.com/photo-1652626076133-22a4ac122141?q=80&w=400&fm=webp"
-          srcset="
-            https://images.unsplash.com/photo-1652626076133-22a4ac122141?q=80&w=400&fm=webp 400w,
-            https://images.unsplash.com/photo-1652626076133-22a4ac122141?q=80&w=600&fm=webp 600w,
-            https://images.unsplash.com/photo-1652626076133-22a4ac122141?q=80&w=800&fm=webp 800w
-          "
-          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          src="{{ asset('images/gallery/img7.jpeg') }}"
           alt="Keepsakes"
           class="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
@@ -497,15 +461,9 @@
       </div>
 
       <!-- Item 7 - visible sm and up -->
-      <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] relative sm:block hidden">
+      <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] relative ">
         <img
-          src="https://images.unsplash.com/photo-1667697692321-19498f860107?q=80&w=400&fm=webp"
-          srcset="
-            https://images.unsplash.com/photo-1667697692321-19498f860107?q=80&w=400&fm=webp 400w,
-            https://images.unsplash.com/photo-1667697692321-19498f860107?q=80&w=600&fm=webp 600w,
-            https://images.unsplash.com/photo-1667697692321-19498f860107?q=80&w=800&fm=webp 800w
-          "
-          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          src="{{ asset('images/gallery/img6.jpeg') }}"
           alt="Evening Glow"
           class="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
@@ -517,13 +475,7 @@
       <!-- Item 8 -->
       <div class="gallery-card rounded-2xl overflow-hidden aspect-[3/4] relative">
         <img
-          src="https://images.unsplash.com/photo-1563829904222-2c743e614282?q=80&w=400&fm=webp"
-          srcset="
-            https://images.unsplash.com/photo-1563829904222-2c743e614282?q=80&w=400&fm=webp 400w,
-            https://images.unsplash.com/photo-1563829904222-2c743e614282?q=80&w=600&fm=webp 600w,
-            https://images.unsplash.com/photo-1563829904222-2c743e614282?q=80&w=800&fm=webp 800w
-          "
-          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          src="{{ asset('images/gallery/img1.jpeg') }}"
           alt="Cruise Views"
           class="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
