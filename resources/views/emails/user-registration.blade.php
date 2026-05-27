@@ -8,7 +8,6 @@
 
     <img src="{{ $message->embed($qrImagePath) }}" alt="CashApp QR Code" width="200">
 
-    <p><strong>Ticket Number:</strong> {{ $registration->ticket_number }}</p>
     <p>We'll notify you once your payment is verified and your spot is confirmed.</p>
     <p>Questions? Reply to this email.</p>
 </body>
