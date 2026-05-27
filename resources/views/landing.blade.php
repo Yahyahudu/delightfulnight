@@ -490,24 +490,46 @@
 
 
 
-    <!-- ==================== CONTACT / RESERVE SECTION ==================== -->
-    <section class="py-16 sm:py-20 bg-[#0d0418]" id="contact">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            <p class="text-rose-300 text-sm uppercase tracking-[0.2em] mb-3 font-medium">Join Us</p>
-            <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">Ready for an Unforgettable Evening?</h2>
-            <p class="text-white/60 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
-                Secure your spot aboard the most elegant tea party cruise of the season. Limited tickets available.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="{{ route('register') }}" class="tap-target px-10 py-4 bg-gradient-to-r from-fuchsia-600 to-rose-500 rounded-full text-white font-semibold text-lg premium-shadow hover:shadow-xl hover:shadow-rose-500/40 transition-all duration-300 inline-block">
-                    Reserve Your Spot
-                </a>
-                <a href="mailto:hello@teapartycruise.com" class="tap-target px-10 py-4 glass-card rounded-full text-white font-medium text-lg hover:bg-white/12 transition-all duration-300 inline-block">
-                    Contact Us
-                </a>
-            </div>
+<!-- ==================== CONTACT / RESERVE SECTION ==================== -->
+<section class="py-16 sm:py-20 bg-[#0d0418]" id="contact">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <p class="text-rose-300 text-sm uppercase tracking-[0.2em] mb-3 font-medium">Join Us</p>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">Ready for an Unforgettable Evening?</h2>
+        <p class="text-white/60 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+            Secure your spot aboard the most elegant tea party cruise of the season. Limited tickets available.
+        </p>
+
+        <!-- Contact Info: Phone & Email -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-8 text-white/80 text-sm sm:text-base">
+            <!-- Phone -->
+            <a href="tel:+15551234567" class="inline-flex items-center gap-2 hover:text-rose-300 transition-colors group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-rose-400 group-hover:text-rose-300 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span>+1 (952) 237-2668</span>
+            </a>
+            <!-- Divider (hidden on mobile) -->
+            <span class="hidden sm:block text-white/20">|</span>
+            <!-- Email -->
+            <a href="mailto:Christelle@nsmedicalcourier.com" class="inline-flex items-center gap-2 hover:text-rose-300 transition-colors group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-rose-400 group-hover:text-rose-300 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span>Christelle@nsmedicalcourier.com</span>
+            </a>
         </div>
-    </section>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="{{ route('register') }}" class="tap-target px-10 py-4 bg-gradient-to-r from-fuchsia-600 to-rose-500 rounded-full text-white font-semibold text-lg premium-shadow hover:shadow-xl hover:shadow-rose-500/40 transition-all duration-300 inline-block">
+                Reserve Your Spot
+            </a>
+            <a href="mailto:Christelle@nsmedicalcourier.com" class="tap-target px-10 py-4 glass-card rounded-full text-white font-medium text-lg hover:bg-white/12 transition-all duration-300 inline-block">
+                Contact Us
+            </a>
+        </div>
+    </div>
+</section>
 
     <!-- ==================== FOOTER ==================== -->
     <footer class="py-10 sm:py-12 bg-[#080310] border-t border-white/5">
@@ -579,6 +601,6 @@
                 }
             });
         }, 300);
-    </script>
+    </script>nsmedicalcourier
 </body>
 </html>
