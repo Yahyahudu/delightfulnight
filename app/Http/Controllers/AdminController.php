@@ -51,7 +51,18 @@ class AdminController extends Controller
             return [
                 'id' => $r->id,
                 'name' => $name,
-                'phone' => $r->phone ?? 'N/A',
+                'phone' => (function() use ($r) {
+                    $raw = $r->phone ?? '';
+                    $digits = preg_replace('/\D+/', '', $raw);
+                    if ($digits === '') return 'N/A';
+                    if (strlen($digits) === 10) {
+                        return '('.substr($digits,0,3).') '.substr($digits,3,3).'-'.substr($digits,6);
+                    }
+                    if (strlen($digits) === 11 && $digits[0] === '1') {
+                        return '+1 ('.substr($digits,1,3).') '.substr($digits,4,3).'-'.substr($digits,7);
+                    }
+                    return $raw;
+                })(),
                 'email' => $r->email,
                 'time' => $r->created_at->diffForHumans(),
                 'initials' => $initials ?: '??',
