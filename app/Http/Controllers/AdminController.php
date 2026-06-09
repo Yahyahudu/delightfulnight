@@ -24,14 +24,14 @@ class AdminController extends Controller
 
         // Build the attendees array (for the full list)
         $attendees = $registrations->map(function ($r) {
-            $name = $r->full_name ?? $r->first_name . ' ' . $r->last_name ?? $r->name ?? 'Attendee';
+            
             $initials = '';
-            foreach (explode(' ', $name) as $part) {
+            foreach (explode(' ', $r->name) as $part) {
                 $initials .= strtoupper(substr($part, 0, 1));
             }
             return [
                 'id' => $r->id,
-                'name' => $name,
+                'name' => $r->name,
                 'email' => $r->email,
                 'tickets' => $r->tickets_count ?? 1,
                 'status' => $r->status === 'confirmed' ? 'confirmed' : 'pending',
