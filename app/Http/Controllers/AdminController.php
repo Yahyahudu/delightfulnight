@@ -41,7 +41,7 @@ class AdminController extends Controller
         });
 
         // Recent registrations (last 5)
-        $recentRegistrations = $registrations->take(5)->map(function ($r) {
+        $recentRegistrations = $registrations->take(50)->map(function ($r) {
             $name = $r->full_name ?? $r->first_name . ' ' . $r->last_name ?? $r->name ?? 'Attendee';
             $initials = '';
             foreach (explode(' ', $name) as $part) {
