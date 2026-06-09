@@ -33,6 +33,7 @@ class AdminController extends Controller
                 'id' => $r->id,
                 'name' => $r->name,
                 'email' => $r->email,
+                'phone' => $r->phone ?? 'N/A',
                 'tickets' => $r->tickets_count ?? 1,
                 'status' => $r->status === 'confirmed' ? 'confirmed' : 'pending',
                 'date' => $r->created_at->format('Y-m-d'),
@@ -50,6 +51,7 @@ class AdminController extends Controller
             return [
                 'id' => $r->id,
                 'name' => $name,
+                'phone' => $r->phone ?? 'N/A',
                 'email' => $r->email,
                 'time' => $r->created_at->diffForHumans(),
                 'initials' => $initials ?: '??',

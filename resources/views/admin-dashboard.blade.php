@@ -301,6 +301,7 @@
                                       x-text="a.status"></span>
                             </div>
                             <p class="text-white/50 text-sm" x-text="a.email"></p>
+                            <p class="text-white/60 text-sm" x-text="a.phone"></p>
                             <div class="flex justify-between mt-2 text-xs text-white/30">
                                 <span x-text="a.tickets + ' ticket(s)'"></span>
                                 <span x-text="a.date"></span>
